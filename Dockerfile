@@ -1,5 +1,5 @@
-FROM ruby:latest
-RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
+FROM ruby:alpine
+RUN apk update && apk add nodejs
 RUN mkdir /app
 WORKDIR /app
 COPY Gemfile /app/Gemfile
